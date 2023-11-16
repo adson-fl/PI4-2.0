@@ -13,14 +13,14 @@ public class Veiculo {
 	private boolean reservado;
 	
 	private Date anoModelo;
-	private Date anoFabricacao;
+	private Date anoFabricação;
 	
 	public Veiculo(){
 		
 	}
 
 	public Veiculo(Integer idVeiculo, String modelo, String marca, String placa, Double preco, boolean reservado, Date anoModelo,
-			Date anoFabricacao) {
+			Date anoFabricação) {
 		super();
 		this.idVeiculo = idVeiculo;
 		this.modelo = modelo;
@@ -29,7 +29,7 @@ public class Veiculo {
 		this.preco = preco;
 		this.reservado = reservado;
 		this.anoModelo = anoModelo;
-		this.anoFabricacao = anoFabricacao;
+		this.anoFabricação = anoFabricação;
 	}
 
 	public Integer getIdVeiculo() {
@@ -90,12 +90,12 @@ public class Veiculo {
 		this.anoModelo = anoModelo;
 	}
 
-	public Date getAnoFabricacao() {
-		return anoFabricacao;
+	public Date getAnoFabricação() {
+		return anoFabricação;
 	}
 
-	public void setAnoFabricacao(Date anoFabricacao) {
-		this.anoFabricacao = anoFabricacao;
+	public void setAnoFabricação(Date anoFabricação) {
+		this.anoFabricação = anoFabricação;
 	}
 	
 }

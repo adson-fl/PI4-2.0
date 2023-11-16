@@ -74,7 +74,7 @@
                         <h3>Ferrari 488 GTB</h3>
                         <p>Ano: 2023</p>
                         <p>Preço: R$ 3.000.000</p>
-                        <p>Descrição: 11.000 KM, Automático, Vermelho, Gasolina</p>
+                        <p>Descri��o: 11.000 KM, Automatico, Vermelho, Gasolina</p>
                         <a href="Ferrari.jsp">Ver Descrição</a>
                     </div>
                 </div>

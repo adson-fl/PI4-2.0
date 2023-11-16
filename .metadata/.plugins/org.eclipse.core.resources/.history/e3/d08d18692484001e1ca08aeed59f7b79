@@ -90,12 +90,12 @@ public class Veiculo {
 		this.anoModelo = anoModelo;
 	}
 
-	public Date getAnoFabricacao() {
+	public Date getAnoFabricação() {
 		return anoFabricacao;
 	}
 
-	public void setAnoFabricacao(Date anoFabricacao) {
-		this.anoFabricacao = anoFabricacao;
+	public void setAnoFabricação(Date anoFabricação) {
+		this.anoFabricacao = anoFabricação;
 	}
 	
 }

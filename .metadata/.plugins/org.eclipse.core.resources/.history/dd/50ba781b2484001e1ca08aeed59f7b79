@@ -52,7 +52,7 @@ public class AdmContoller extends HttpServlet {
 		
 		CAR.setMarca(getServletInfo());
 		CAR.setModelo(getServletInfo());
-		CAR.setAnoFabricacao(null);
+		CAR.setAnoFabricação(null);
 		CAR.setAnoModelo(null);
 		CAR.setPlaca(getServletInfo());
 		CAR.setPreco(null);
