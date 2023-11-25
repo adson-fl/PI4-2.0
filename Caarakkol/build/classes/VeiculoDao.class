@@ -1,0 +1,48 @@
+package pi.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import entidades.Veiculo;
+
+public class VeiculoDao {
+	
+	public void cadastrarVeiculo(Veiculo veiculo) {
+		
+		String sql = "INSERT INTO VEICULO VALUES (null,?,?,?,?,?,?,?,?)";
+		PreparedStatement pStatement = null;
+		Connection conn = null;
+		
+		try {
+			conn = new MySQLConnection().getConnection();
+			pStatement = conn.prepareStatement(sql);
+			pStatement.setString(1, veiculo.getDescricao());
+			pStatement.setString(2, veiculo.getMarca());
+			pStatement.setString(3, veiculo.getModelo());
+			pStatement.setString(4, veiculo.getPlaca());
+			pStatement.setDate(5, veiculo.getAnoFabricacao());
+			pStatement.setDate(6, veiculo.getAnoModelo());
+			pStatement.setDouble(7, veiculo.getPreco());
+			pStatement.setBoolean(8, veiculo.isReservado());
+			pStatement.execute();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(pStatement!=null)
+					pStatement.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			try {
+				if(conn!=null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+	}
+
+}
