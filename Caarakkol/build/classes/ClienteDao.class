@@ -1,0 +1,47 @@
+package pi.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import entidades.Cliente;
+
+public class ClienteDao {
+	
+	public void cadastrarCliente(Cliente cliente) {
+		
+		String sql = "INSERT INTO CLIENTE VALUES (null,?,?,?,?,?,?,?)";
+		PreparedStatement pStatement = null;
+		Connection conn = null;
+		
+		try {
+			conn = new MySQLConnection().getConnection();
+			pStatement = conn.prepareStatement(sql);
+			pStatement.setString(1, cliente.getNome());
+			pStatement.setString(2, cliente.getSenha());
+			pStatement.setString(3, cliente.getLogin());
+			pStatement.setString(4, cliente.getCelular());
+			pStatement.setDate(5, cliente.getNacimentoCliente());
+			pStatement.setDate(6, cliente.getCadastroCliente());
+			pStatement.setBoolean(7, cliente.isAtivo());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(pStatement!=null)
+					pStatement.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			try {
+				if(conn!=null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		}
+		
+	}
+
+}
