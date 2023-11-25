@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/home.css" />
+    <link rel="stylesheet" type="text/css" href="detalhes.css" />
 <title>Detalhes do Veículo</title>
   <link rel="stylesheet" type="text/css" href="detalhes.css">
 </head>
